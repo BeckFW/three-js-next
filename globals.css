@@ -1,0 +1,42 @@
+body {
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+      'Arial', sans-serif;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.65;
+    word-break: break-word;
+    font-kerning: auto;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    hyphens: auto;
+  }
+  
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+  .ar-wrapper {
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    padding: 10% 10% 20% 10%;
+  }
+  .ar-text {
+    color: white;
+    font-size: 1rem;
+  }
