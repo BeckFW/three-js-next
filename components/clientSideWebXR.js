@@ -5,6 +5,7 @@ import { XR, VRButton, ARButton, XRButton, useXREvent } from '@react-three/xr'
 import { Html, Environment, useGLTF, ContactShadows, OrbitControls, Text } from '@react-three/drei'
 import ThreeContent from '../components/ThreeContent'
 
+// The content that will be displayed in AR //
 function Model(props) {
   const group = useRef()
   
@@ -28,24 +29,25 @@ function Model(props) {
 }
 
 export default function ClientXR() {
-
+  // Setup page for AR
   return (
     <>
-    <ARButton />
+    <ARButton /> {/* All AR apps with WebXR must include a VR/AR Button */}
     <Canvas 
       style={{ position: 'absolute', top: 0, left: 0 }} 
       camera={{ position: [-5, 0, -15], fov: 55, zoom: 50}}
       >
-      <XR referenceSpace='local'>
+      <XR referenceSpace='local'> {/* Start XR */}
       <pointLight position={[10, 10, 10]} intensity={1.5} />
       <Suspense fallback={null}>
         <group rotation={[0, Math.PI, 0]} position={[0, 0, 0]}>
+          {/* The content we setup in Model function above */}
           <Model />
         </group>
       </Suspense>
       <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
       <OrbitControls enablePan={false} enableZoom={false} />
-      </XR>
+      </XR> {/* End XR */}
     </Canvas>
 
     </>

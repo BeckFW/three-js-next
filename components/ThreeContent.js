@@ -1,5 +1,6 @@
 export default function ThreeContent() {
 
+  // Example Dataset to populate sign // 
   const floors = [
     {
       name: "G", 
@@ -39,9 +40,11 @@ export default function ThreeContent() {
   ]   
 
     return(
+      // Create sign layout
       <main className="relative">
 
       <div class="groundSeperatorGroup">
+      {/* Map data from example set into sign */}
       {floors.map((floor) => {
         return(
           <div className="w-full">
